@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaInstagram, FaDownload, FaArrowDown } from 'reac
 import { ReactTyped } from "react-typed"
 
 
-const Hero = () => {
+const Home = () => {
   const socialLinks = [
     { name: 'GitHub', icon: FaGithub, href: 'https://github.com/Abde-Ali-Arif', color: 'hover:text-gray-400' },
     { name: 'LinkedIn', icon: FaLinkedin, href: 'https://www.linkedin.com/in/abde-ali-arif-a2205a317/', color: 'hover:text-blue-400' },
@@ -49,7 +49,7 @@ const Hero = () => {
                 <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center">
                   <div className="w-44 h-44 md:w-60 md:h-60 rounded-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
                     <span className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-                      AA
+                      <img src="/logo.png" alt="AA" className='rounded-full object-cover' />
                     </span>
                   </div>
                 </div>
@@ -167,4 +167,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default Home
