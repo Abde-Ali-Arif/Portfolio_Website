@@ -1,16 +1,17 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaInstagram, FaHeart, FaCode } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   const quickLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Skills', href: '/skills' },
+    { name: 'Projects', href: '/projects' },
+    { name: 'Contact', href: '/contact' },
   ]
 
   const socialLinks = [
@@ -90,15 +91,16 @@ const Footer = () => {
           >
             <h4 className="text-lg font-semibold text-white">Quick Links</h4>
             <ul className="space-y-2">
-              {quickLinks.map((link, index) => (
-                <li key={link.name}>
+              {quickLinks.map((item) => (
+                <li>
+                  <Link key={item.name} to={item.href} >
                   <motion.button
-                    onClick={() => scrollToSection(link.href)}
                     whileHover={{ x: 5 }}
                     className="text-gray-400 hover:text-blue-500 transition-colors duration-300 text-left"
-                  >
-                    {link.name}
+                    >
+                    {item.name}
                   </motion.button>
+                    </Link>
                 </li>
               ))}
             </ul>

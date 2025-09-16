@@ -10,10 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "framer-motion": "^11.11.17",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "framer-motion": "^11.11.17",
     "react-icons": "^5.4.0",
+    "react-router-dom": "^7.9.1",
     "react-typed": "^2.0.12"
   },
   "devDependencies": {
@@ -31,4 +32,3 @@
     "vite": "^7.1.2"
   }
 }
-
