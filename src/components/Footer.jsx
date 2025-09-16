@@ -35,12 +35,12 @@ const Footer = () => {
     }
   ]
 
-  const scrollToSection = (href) => {
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
+  // const scrollToSection = (href) => {
+  //   const element = document.querySelector(href)
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: 'smooth' })
+  //   }
+  // }
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -95,7 +95,9 @@ const Footer = () => {
                 <li>
                   <Link key={item.name} to={item.href} >
                   <motion.button
+                    onClick={scrollToTop}
                     whileHover={{ x: 5 }}
+                    whileTap={{ scale: 0.9 }}
                     className="text-gray-400 hover:text-blue-500 transition-colors duration-300 text-left"
                     >
                     {item.name}

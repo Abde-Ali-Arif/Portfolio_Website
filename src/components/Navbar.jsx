@@ -25,6 +25,10 @@ const Navbar = () => {
     { name: "Contact", href: "/contact", icon: FaEnvelope },
   ]
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -54,6 +58,7 @@ const Navbar = () => {
               {navItems.map((item) => (
                 <Link key={item.name} to={item.href}>
                   <motion.button
+                  onClick={scrollToTop}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="text-gray-300 hover:text-blue-500 px-3 py-2 text-sm font-medium transition-colors duration-200 flex items-center space-x-2"
@@ -95,6 +100,7 @@ const Navbar = () => {
             {navItems.map((item) => (
               <Link key={item.name} to={item.href}>
                 <motion.button
+                onClick={scrollToTop}
                   whileHover={{ x: 10 }}
                   className="text-gray-300 hover:text-blue-500 px-3 py-2 text-base font-medium w-full text-left flex items-center space-x-3 transition-colors duration-200"
                 >
